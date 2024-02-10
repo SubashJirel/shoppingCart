@@ -1,8 +1,9 @@
 import './App.css';
 import { Link } from 'react-router-dom';
-import Home from './pages/Home';
+
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import Home from './components/home/Home';
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
           </li>
         </ul>
       </nav>
+      <Home />
       <Footer />
     </>
   );

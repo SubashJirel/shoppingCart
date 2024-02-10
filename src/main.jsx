@@ -5,11 +5,22 @@ import Cart from './components/cart/cart.jsx';
 import './index.css';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Layout } from './Layout.jsx';
+import Home from './components/home/Home.jsx';
+import About from './components/about/About.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Layout />,
+    children: [
+      { index: true, element: <Home /> },
+
+      {
+        path: 'about',
+        element: <About />,
+      },
+    ],
   },
   {
     path: 'cart',
