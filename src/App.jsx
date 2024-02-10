@@ -1,10 +1,13 @@
 import './App.css';
 import { Link } from 'react-router-dom';
 import Home from './pages/Home';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 function App() {
   return (
     <>
-      <h1>Hello from app</h1>
+      <Header />
+      <h1 className="bg-green-400 p-4">Hello from app</h1>
       <Home />
       <nav>
         <ul>
@@ -13,6 +16,7 @@ function App() {
           </li>
         </ul>
       </nav>
+      <Footer />
     </>
   );
 }
