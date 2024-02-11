@@ -1,7 +1,7 @@
 import React from 'react';
 // import { ArrowUpRight } from 'lucide-react';
 
-export function Card({ key, price, image, title, description }) {
+export function Card({ itemId, price, image, title, description, addToCart }) {
   return (
     <div className=" rounded-md border">
       <img
@@ -17,6 +17,7 @@ export function Card({ key, price, image, title, description }) {
         <button
           type="button"
           className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+          onClick={() => addToCart(itemId)}
         >
           Add to cart
         </button>

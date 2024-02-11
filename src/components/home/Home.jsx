@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+
 export default function Home() {
   return (
     <div className="mx-auto w-full max-w-7xl">
@@ -12,7 +13,7 @@ export default function Home() {
 
             <Link
               className="inline-flex text-white items-center px-6 py-3 font-medium bg-orange-700 rounded-lg hover:opacity-75"
-              to="/"
+              to="/shop"
             >
               <svg
                 fill="white"
