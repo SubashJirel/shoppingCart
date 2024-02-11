@@ -13,3 +13,37 @@ h1,
 p {
   font-family: Lato;
 }
+.autoFitThisGrid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  gap: 20px;
+}
+
+.floatCard {
+  background-color: #fff;
+  border-radius: 4px;
+
+  position: relative;
+
+  color: #444;
+}
+.card:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #ccc;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  top: 50%;
+  z-index: -1;
+  box-shadow: 0 0 40px #999999;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.card.level-3:hover:before {
+  box-shadow: 0 0 80px #999999;
+}
+.card h5 {
+  font-weight: 300;
+  font-size: 30px;
+}

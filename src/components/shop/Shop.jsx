@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Card } from '../card/Card';
 
 function Shop() {
   const [data, setData] = useState([]);
@@ -14,13 +15,22 @@ function Shop() {
 
   return (
     <>
-      <h1>This is the shop section</h1>
-      <p>Jewellery items:</p>
-      <ul>
-        {data.map((item, index) => (
-          <li key={index}>{item.title}</li>
-        ))}
-      </ul>
+      <div className="h-full min-h-screen ">
+        <ul className="grid autoFitThisGrid mt-4">
+          {data.map((item) => (
+            <li key={item.id} className="border ">
+              <Card
+                key={item.id}
+                price={item.price}
+                title={item.title.split(' ').slice(0, 3).join(' ')}
+                image={item.image}
+                description={item.description}
+              />
+            </li>
+            //   <li key={index}>{item.title}</li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 }
