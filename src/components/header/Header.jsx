@@ -1,10 +1,12 @@
 import { Link, NavLink } from 'react-router-dom';
 import { ShoppingCart } from 'phosphor-react';
+import { useCartContext } from '../../Layout';
 
 export default function Header() {
+  const { cartForHeader } = useCartContext();
   return (
-    <header className="shadow ">
-      <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
+    <header className="shadow sticky z-50 top-0 ">
+      <nav className="bg-white  border-gray-200 px-4 lg:px-6 py-2.5">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <Link to="/" className="flex items-center">
             <img
@@ -19,6 +21,7 @@ export default function Header() {
               className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
             >
               <ShoppingCart size={30} />
+              {cartForHeader.length}
             </Link>
           </div>
           <div
