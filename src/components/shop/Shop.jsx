@@ -4,17 +4,29 @@ import { useCartContext } from '../../Layout';
 
 function Shop() {
   const [data, setData] = useState([]);
-  // const [cart, setCart] = useState([]);
+  const [cartIcon, setCartIcon] = useState({});
+  const [cart, setCart] = useState([]);
   const { handleSetCartForHeader } = useCartContext();
 
   function addToCart(itemId) {
     // console.log(itemId);
     const selected = data.find((val) => val.id === itemId);
+
     // console.log(selected);
-    // setCart((prev) => [...prev, selected]);
+    setCart((prev) => [...prev, selected]);
     handleSetCartForHeader(selected);
+    // handleSetCartForHeader(cartIcon);
     // console.log(cart);
   }
+  // function addToCart2(itemId) {
+  //   setCartIcon((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 }));
+  //   console.log(cartIcon);
+  //   const totalItems = Object.values(cartIcon).reduce(
+  //     (acc, currentValue) => acc + currentValue,
+  //     0
+  //   );
+  //   console.log(totalItems);
+  // }
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
       .then((res) => res.json())

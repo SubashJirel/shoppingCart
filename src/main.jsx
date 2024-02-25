@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
-import Cart from './components/cart/cart.jsx';
+import Cart from './components/cart/Cart.jsx';
 import './index.css';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -30,11 +30,11 @@ const router = createBrowserRouter([
         path: 'shop',
         element: <Shop />,
       },
+      {
+        path: 'cart',
+        element: <Cart />,
+      },
     ],
-  },
-  {
-    path: 'cart',
-    element: <Cart />,
   },
 ]);
 

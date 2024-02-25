@@ -4,7 +4,7 @@ function Cart() {
     <>
       <h1>This is the cart</h1>
       <h3>
-        <Link to="/">go to main Page</Link>
+        <Link to="/">go to Home Page</Link>
       </h3>
     </>
   );

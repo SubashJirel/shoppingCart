@@ -18,8 +18,9 @@ export const Layout = () => {
 
   const handleSetCartForHeader = (dataFromChild) => {
     setCartForHeader((prev) => [...prev, dataFromChild]);
-    // console.log('from the layout');
-    // console.log(cartForHeader);
+    console.log('from the layout');
+    console.log(cartForHeader);
+    // console.log(dataFromChild);
   };
 
   return (
