@@ -35,6 +35,7 @@ Check out the live demo of memeory game [here](https://shopping-cart-sigma-khaki
 - [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling.
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework.
+- [Fake store rest api.](https://fakestoreapi.com/) - Fake store rest api for your ecommerce or shopping website prototype.
 
 ## License
 
